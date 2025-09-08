@@ -7,7 +7,7 @@
     <meta name="keywords" content="weather,app,html,css,javascript,api">
     <title>Weather-App</title>
     <link rel="shortcut icon" href="./images/cloud-removebg-preview.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="./styles/bootstrap.min.css">
     <link rel="stylesheet" href="./styles/style.css">
 </head>
@@ -16,7 +16,7 @@
         <div class="bg-color py-5">
             <div class="container">
                 <div class="search m-auto">
-                    <input type="text" class="w-100 border mb-5" placeholder="Search city...">
+                    <input id="search-bar" type="text" class="w-100 border mb-5" placeholder="Search city...">
                 </div>
                 <div class="city-temp d-flex">
                     <div class="temp-card shadow">
@@ -24,8 +24,8 @@
                             <p id="today">Saturday</p>
                             <p id="today-date">6 Sept</p>
                         </div>
-                        <div class="temp-details">
-                            <p id="location">Cairo</p>
+                        <div class="temp-details px-4">
+                            <p id="city-location">Cairo</p>
                             <div class="d-flex justify-content-between my-4">
                                 <div class="pt-3">
                                     <h2 id="today-degree" class="d-inline-block">30.1</h2>
@@ -34,28 +34,48 @@
                                 <img src="./images/113.webp" width="90" alt="sun,weather" id="today-icon">
                             </div>
                             <p id="today-description">Sunny</p>
-                            <div class="detailes">
-                                <i></i>
-                                <span id="humidty">62</span>
-                                <span>%</span>
-                                <i></i>
-                                <span id="wind">10.4</span>
-                                <span>km/h</span>
-                                <i></i>
-                                <span>NNW</span>
+                            <div class="details d-flex justify-content-between">
+                                <div>
+                                    <i class="fa-solid fa-umbrella"></i>
+                                    <span id="humidity">62%</span>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-wind"></i>
+                                    <span id="wind">10.4</span>
+                                    <span>km/h</span>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-compass"></i>
+                                    <span id="compass">NNW</span>
+                                </div>
+                                
                             </div>
                         </div>
                     </div>
                     <div class="temp-card text-center shadow">
-                        <div class="day-and-date"></div>
+                        <div class="day-and-date d-flex justify-content-between">
+                            <p class="nextDay">Sunday</p>
+                            <!-- <p id="today-date">7 Sept</p> -->
+                        </div>
+                         <img class="nextDay-icon" src="./images/113.webp" width="80" alt="sun">
+                         <h3><span class="max-degree">28</span><sup>o</sup>C</h3>
+                         <h4><span class="min-degree">20</span><sup>o</sup>C</h4>
+                         <p class="nextDay-description">Cloudy</p>
                     </div>
                     <div class="temp-card text-center shadow">
-                        <div class="day-and-date"></div>
+                        <div class="day-and-date d-flex justify-content-between">
+                            <p class="nextDay">Monday</p>
+                        </div>
+                         <img class="nextDay-icon" src="./images/113.webp" width="80" alt="weather icon- Sunny">
+                         <h3><span class="max-degree">28</span><sup>o</sup>C</h3>
+                         <h4><span class="min-degree">20</span><sup>o</sup>C</h4>
+                        <p class="nextDay-description">Cloudy</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <script src="./script/popper.min.js"></script>
     <script src="./script/bootstrap.bundle.min.js"></script>
     <script src="./script/main.js"></script>
 </body>
